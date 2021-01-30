@@ -1,0 +1,1 @@
+oj t -c "python3 $1.py" -d tests

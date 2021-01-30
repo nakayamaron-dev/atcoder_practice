@@ -1,0 +1,10 @@
+◎ login
+oj login -u naka_ron -p ronronron777 "https://atcoder.jp/"
+oj login --check "https://atcoder.jp/"
+
+◎ Run
+bash ../../../script/run.sh 
+
+◎ おまじない
+#!/usr/bin/env python3
+
