@@ -1,25 +1,26 @@
-import math
-import itertools
-from functools import reduce
-
 # 階乗計算
 def calc_factorial(n):
+    import math
     return math.factorial(n)
 
 # 順列総数計算
 def calc_permutations_count(n, r):
+    import math
     return math.factorial(n) // math.factorial(n - r)
 
 # 組み合わせ総数計算
 def calc_combinations_count(n, r):
+    import math
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
 # 順列をリスト化
 def permutations_array(num_array, r):
+    import itertools
     return list(itertools.permutations(num_array, r))
 
 # 組み合わせをリスト化
 def combinations_array(num_array, r):
+    import itertools
     return list(itertools.combinations(num_array, r))
 
 # 約数列挙
@@ -44,12 +45,14 @@ def calc_mod(n, mod):
 
 # 最大公約数
 def gcd_list(num_list: list) -> int:
+    from functools import reduce
     return reduce(gcd, num_list)
 
 # 最小公倍数
 def lcm_base(x: int, y: int) -> int:
     return (x * y) // gcd(x, y)
 def lcm_list(num_list: list):
+    from functools import reduce
     return reduce(lcm_base, num_list, 1)
 
 # 素因数分解
@@ -68,3 +71,12 @@ def prime_factorize(n: int) -> list:
     if n != 1:
         return_list.append(n)
     return return_list
+
+# 数字 → アルファベット変換
+def num2alpha(num):
+    if num<=26:
+        return chr(64+num)
+    elif num%26==0:
+        return num2alpha(num//26-1)+chr(90)
+    else:
+        return num2alpha(num//26)+chr(64+num%26)
