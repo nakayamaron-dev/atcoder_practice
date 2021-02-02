@@ -44,16 +44,16 @@ def calc_mod(n, mod):
     return n % mod
 
 # 最大公約数
-def gcd_list(num_list: list) -> int:
+def my_gcd(*numbers):
     from functools import reduce
-    return reduce(gcd, num_list)
+    return reduce(math.gcd, numbers)
 
-# 最小公倍数
-def lcm_base(x: int, y: int) -> int:
-    return (x * y) // gcd(x, y)
-def lcm_list(num_list: list):
-    from functools import reduce
-    return reduce(lcm_base, num_list, 1)
+# # 最小公倍数
+# def lcm_base(x: int, y: int) -> int:
+#     return (x * y) // gcd(x, y)
+# def lcm_list(num_list: list):
+#     from functools import reduce
+#     return reduce(lcm_base, num_list, 1)
 
 # 素因数分解
 def prime_factorize(n: int) -> list:
