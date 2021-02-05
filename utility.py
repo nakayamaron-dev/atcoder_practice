@@ -36,8 +36,12 @@ def make_divisors(n):
     return lower_divisors + upper_divisors[::-1]
 
 # 数字を桁ごとにリスト化
-def splitdigit(num_str):
-    return list(map(int, num_str))
+def splitdigit(num):
+    return list(map(int, str(num)))
+
+# 桁数
+def digit_num(num):
+    return len(str(num))
 
 # mod計算
 def calc_mod(n, mod):
