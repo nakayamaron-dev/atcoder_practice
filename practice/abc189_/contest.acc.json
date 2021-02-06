@@ -31,7 +31,11 @@
       "id": "abc189_d",
       "label": "D",
       "title": "Logical Expression",
-      "url": "https://atcoder.jp/contests/abc189/tasks/abc189_d"
+      "url": "https://atcoder.jp/contests/abc189/tasks/abc189_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc189_e",
