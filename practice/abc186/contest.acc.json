@@ -35,7 +35,11 @@
       "id": "abc186_d",
       "label": "D",
       "title": "Sum of difference",
-      "url": "https://atcoder.jp/contests/abc186/tasks/abc186_d"
+      "url": "https://atcoder.jp/contests/abc186/tasks/abc186_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc186_e",
