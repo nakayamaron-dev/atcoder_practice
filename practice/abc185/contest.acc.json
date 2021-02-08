@@ -31,7 +31,11 @@
       "id": "abc185_d",
       "label": "D",
       "title": "Stamp",
-      "url": "https://atcoder.jp/contests/abc185/tasks/abc185_d"
+      "url": "https://atcoder.jp/contests/abc185/tasks/abc185_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc185_e",
