@@ -31,7 +31,11 @@
       "id": "abc184_d",
       "label": "D",
       "title": "increment of coins",
-      "url": "https://atcoder.jp/contests/abc184/tasks/abc184_d"
+      "url": "https://atcoder.jp/contests/abc184/tasks/abc184_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc184_e",
