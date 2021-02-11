@@ -14,9 +14,9 @@ def calc_combinations_count(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
 # 順列をリスト化
-def permutations_array(num_array, r):
+def permutations_array(arr, r):
     import itertools
-    return list(itertools.permutations(num_array, r))
+    return list(itertools.permutations(arr, r))
 
 # 組み合わせをリスト化
 def combinations_array(num_array, r):
@@ -49,13 +49,14 @@ def calc_mod(n, mod):
 
 # 最大公約数
 def my_gcd(*numbers):
+    import math
     from functools import reduce
     return reduce(math.gcd, numbers)
 
-# 最小公倍数
-def calc_lm(*numbers):
-    import math
-    return int(a * b / math.gcd(a, b))
+# # 最小公倍数
+# def calc_lm(*numbers):
+#     import math
+#     return int(a * b / math.gcd(a, b))
 
 # 素因数分解
 def prime_factorize(n: int) -> list:

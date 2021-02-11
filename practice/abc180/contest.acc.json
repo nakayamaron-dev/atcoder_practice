@@ -31,7 +31,11 @@
       "id": "abc180_d",
       "label": "D",
       "title": "Takahashi Unevolved",
-      "url": "https://atcoder.jp/contests/abc180/tasks/abc180_d"
+      "url": "https://atcoder.jp/contests/abc180/tasks/abc180_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc180_e",

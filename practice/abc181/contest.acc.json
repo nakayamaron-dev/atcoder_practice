@@ -31,7 +31,11 @@
       "id": "abc181_d",
       "label": "D",
       "title": "Hachi",
-      "url": "https://atcoder.jp/contests/abc181/tasks/abc181_d"
+      "url": "https://atcoder.jp/contests/abc181/tasks/abc181_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc181_e",
