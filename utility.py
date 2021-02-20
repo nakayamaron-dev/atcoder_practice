@@ -1,3 +1,5 @@
+from collections import Counter
+
 # print()の便利版
 def chkprint(*args):
     from inspect import currentframe
