@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-n = int(input())
-b = list(map(int, input().split()))
+N = int(input())
+S = input()
+N, K = map(int,input().split())
+A = list(map(int, input().split()))
 
-a, b = map(int,input().split())
-
-l = list(map(int, input().split()))
-
-l = [int(input()) for _ in range(n)]
+l = [int(input()) for _ in range(N)]
 
 # 行列
-l = [list(map(int, input().split())) for l in range(n)]
+l = [list(map(int, input().split())) for l in range(N)]
 

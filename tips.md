@@ -1,0 +1,1 @@
+- pythonでTLEになる場合はPyPy3を試してみる。forループが早い。
