@@ -32,7 +32,7 @@ def combinations_array(num_array, r):
     return list(itertools.combinations(num_array, r))
 
 # 約数列挙
-def make_divisors(n):
+def get_divisors(n):
     lower_divisors , upper_divisors = [], []
     i = 1
     while i*i <= n:
