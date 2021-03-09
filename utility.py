@@ -1,4 +1,6 @@
 from collections import Counter
+from bisect import bisect_left,bisect_right
+from decimal import Decimal
 
 # print()の便利版
 def chkprint(*args):
@@ -30,6 +32,11 @@ def permutations_array(arr, r):
 def combinations_array(num_array, r):
     import itertools
     return list(itertools.combinations(num_array, r))
+
+# 重複ありで組み合わせをリスト化
+def combinations_with_replacement(arr, n):
+    import itertools
+    return list(itertools.combinations_with_replacement(arr, n))
 
 # 約数列挙
 def get_divisors(n):
