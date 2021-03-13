@@ -38,6 +38,11 @@ def combinations_with_replacement(arr, n):
     import itertools
     return list(itertools.combinations_with_replacement(arr, n))
 
+# 0,1の組み合わせ
+def iter_product(n: int):
+    import itertools
+    return itertools.product(range(2), repeat=n)
+
 # 約数列挙
 def get_divisors(n):
     lower_divisors , upper_divisors = [], []
@@ -68,10 +73,10 @@ def my_gcd(*numbers):
     from functools import reduce
     return reduce(math.gcd, numbers)
 
-# # 最小公倍数
-# def calc_lm(*numbers):
-#     import math
-#     return int(a * b / math.gcd(a, b))
+# 最小公倍数
+def calc_lm(a: int, b: int):
+    import math
+    return int(a * b / math.gcd(a, b))
 
 # 素因数分解
 def prime_factorize(n: int) -> list:
@@ -98,3 +103,12 @@ def num2alpha(num):
         return num2alpha(num//26-1)+chr(90)
     else:
         return num2alpha(num//26)+chr(64+num%26)
+
+# 素数判定
+def is_prime(n):
+    import math
+    if n == 1: return False
+    for k in range(2, int(math.sqrt(n)) + 1):
+        if n % k == 0:
+            return False
+    return True
