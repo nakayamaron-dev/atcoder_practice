@@ -30,4 +30,4 @@ for ptn in iter_product(N):
 
 print(ans)
 
-## self AC
+## not self AC
