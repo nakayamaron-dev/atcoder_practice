@@ -31,7 +31,11 @@
       "id": "abc172_d",
       "label": "D",
       "title": "Sum of Divisors",
-      "url": "https://atcoder.jp/contests/abc172/tasks/abc172_d"
+      "url": "https://atcoder.jp/contests/abc172/tasks/abc172_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc172_e",

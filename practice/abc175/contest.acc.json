@@ -31,7 +31,11 @@
       "id": "abc175_d",
       "label": "D",
       "title": "Moving Piece",
-      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_d"
+      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc175_e",
