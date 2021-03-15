@@ -31,7 +31,11 @@
       "id": "abc169_d",
       "label": "D",
       "title": "Div Game",
-      "url": "https://atcoder.jp/contests/abc169/tasks/abc169_d"
+      "url": "https://atcoder.jp/contests/abc169/tasks/abc169_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc169_e",

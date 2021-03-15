@@ -31,7 +31,11 @@
       "id": "abc168_d",
       "label": "D",
       "title": ".. (Double Dots)",
-      "url": "https://atcoder.jp/contests/abc168/tasks/abc168_d"
+      "url": "https://atcoder.jp/contests/abc168/tasks/abc168_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc168_e",
