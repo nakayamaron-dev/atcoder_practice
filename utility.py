@@ -1,4 +1,5 @@
 from collections import Counter
+from collections import deque
 from bisect import bisect_left,bisect_right
 from decimal import Decimal
 
