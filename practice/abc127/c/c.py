@@ -11,5 +11,6 @@ for _ in range(M):
 if minval > maxval:
     print(0)
 else:
-    ans = maxval - minval + 1
-    print(ans)
+    print(maxval - minval + 1)
+
+# self AC
