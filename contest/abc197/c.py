@@ -2,6 +2,7 @@ N = int(input())
 A = list(map(int, input().split()))
 ans = float("inf")
 
+#bit全探索
 for i in range(2**(N-1)):
     or_num = 0
     xor_num = 0
