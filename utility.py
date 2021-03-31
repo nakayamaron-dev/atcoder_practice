@@ -69,13 +69,13 @@ def calc_mod(n, mod):
     return n % mod
 
 # 最大公約数
-def my_gcd(*numbers):
+def get_gcd(*numbers):
     import math
     from functools import reduce
     return reduce(math.gcd, numbers)
 
 # 最小公倍数
-def calc_lm(a: int, b: int):
+def get_lm(a: int, b: int):
     import math
     return int(a * b / math.gcd(a, b))
 
