@@ -9,6 +9,16 @@ def chkprint(*args):
     names = {id(v):k for k,v in currentframe().f_back.f_locals.items()}
     print(', '.join(names.get(id(arg),'???')+' = '+repr(arg) for arg in args))
 
+# 配列の要素数列挙
+def arr_counter(arr):
+    from collections import Counter
+    return Counter(arr)
+
+# 配列で最も多い要素順に出力
+def counter_most_common(arr):
+    from collections import Counter
+    return Counter(arr).most_common()
+
 # 階乗計算
 def calc_factorial(n):
     import math
