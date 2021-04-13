@@ -5,4 +5,4 @@ N, M = map(int,input().split())
 A = list(map(int, input().split()))
 
 L = [int(input()) for _ in range(N)]
-L = [list(map(int, input().split())) for l in range(N)]
+L = [list(map(int, input().split())) for _ in range(N)]
