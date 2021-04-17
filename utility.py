@@ -50,9 +50,9 @@ def combinations_with_replacement(arr, n):
     return list(itertools.combinations_with_replacement(arr, n))
 
 # 0,1の組み合わせ
-def iter_product(n: int):
+def iter_product(arr, n):
     import itertools
-    return itertools.product(range(2), repeat=n)
+    return list(itertools.product(arr, repeat=n))
 
 # 約数列挙
 def get_divisors(n):
