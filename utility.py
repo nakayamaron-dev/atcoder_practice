@@ -87,7 +87,7 @@ def get_gcd(*numbers):
 # 最小公倍数
 def get_lm(a: int, b: int):
     import math
-    return int(a * b / math.gcd(a, b))
+    return (a * b) // math.gcd(a, b)
 
 # 素因数分解
 def prime_factorize(n: int) -> list:
