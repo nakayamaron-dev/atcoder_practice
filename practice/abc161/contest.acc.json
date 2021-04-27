@@ -31,7 +31,11 @@
       "id": "abc161_d",
       "label": "D",
       "title": "Lunlun Number",
-      "url": "https://atcoder.jp/contests/abc161/tasks/abc161_d"
+      "url": "https://atcoder.jp/contests/abc161/tasks/abc161_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc161_e",

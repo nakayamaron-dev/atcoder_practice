@@ -31,7 +31,11 @@
       "id": "abc160_d",
       "label": "D",
       "title": "Line++",
-      "url": "https://atcoder.jp/contests/abc160/tasks/abc160_d"
+      "url": "https://atcoder.jp/contests/abc160/tasks/abc160_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc160_e",

@@ -31,7 +31,11 @@
       "id": "abc155_d",
       "label": "D",
       "title": "Pairs",
-      "url": "https://atcoder.jp/contests/abc155/tasks/abc155_d"
+      "url": "https://atcoder.jp/contests/abc155/tasks/abc155_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc155_e",

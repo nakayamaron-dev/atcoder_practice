@@ -31,7 +31,11 @@
       "id": "abc151_d",
       "label": "D",
       "title": "Maze Master",
-      "url": "https://atcoder.jp/contests/abc151/tasks/abc151_d"
+      "url": "https://atcoder.jp/contests/abc151/tasks/abc151_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc151_e",

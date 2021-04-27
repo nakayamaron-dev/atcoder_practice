@@ -31,7 +31,11 @@
       "id": "abc152_d",
       "label": "D",
       "title": "Handstand 2",
-      "url": "https://atcoder.jp/contests/abc152/tasks/abc152_d"
+      "url": "https://atcoder.jp/contests/abc152/tasks/abc152_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc152_e",

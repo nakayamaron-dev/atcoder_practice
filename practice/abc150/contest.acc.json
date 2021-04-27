@@ -31,7 +31,11 @@
       "id": "abc150_d",
       "label": "D",
       "title": "Semi Common Multiple",
-      "url": "https://atcoder.jp/contests/abc150/tasks/abc150_d"
+      "url": "https://atcoder.jp/contests/abc150/tasks/abc150_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc150_e",

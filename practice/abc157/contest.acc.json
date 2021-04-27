@@ -31,7 +31,11 @@
       "id": "abc157_d",
       "label": "D",
       "title": "Friend Suggestions",
-      "url": "https://atcoder.jp/contests/abc157/tasks/abc157_d"
+      "url": "https://atcoder.jp/contests/abc157/tasks/abc157_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc157_e",
