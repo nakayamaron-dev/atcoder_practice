@@ -30,8 +30,4 @@ def solve():
 
 print(solve())
 
-
-
-
-
-
+# self AC

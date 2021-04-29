@@ -17,4 +17,5 @@ def solve():
 
 print(solve())
 
-## 進数変換できればとても簡単
+# self AC
+# 進数変換できればとても簡単

@@ -12,4 +12,4 @@ def solve():
 
 print(solve())
 
-## 簡単
+## self AC
