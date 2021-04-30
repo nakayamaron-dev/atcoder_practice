@@ -1,13 +1,21 @@
 #!/usr/bin/env python3
-N = int(input())
-cache = dict()
-ans = 0
+from collections import Counter
+def main():
+    n = int(input())
+    ans = 0
+    cache = dict()
 
-for i in range(N):
-    s = "".join(sorted(list(input())))
-    ans += cache.get(s, 0)
-    cache[s] = cache.get(s, 0) + 1
+    for _ in range(n):
+        w = "".join(sorted(input()))
 
-print(ans)
+        if cache.get(w, 0) == 0:
+            cache[w] = 1
+        else:
+            ans += cache.get(w, 0)
+            cache[w] += 1
+    
+    return ans
 
-## not self AC
+print(main())
+
+# not self AC
