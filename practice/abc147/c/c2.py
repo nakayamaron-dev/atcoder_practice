@@ -1,33 +1,31 @@
 #!/usr/bin/env python3
-def iter_product(n: int):
+def iter_product(arr, n):
     import itertools
-    return itertools.product(range(2), repeat=n)
+    return list(itertools.product(arr, repeat=n))
 
-N = int(input())
-XY = []
+def main():
+    n = int(input())
+    XY = []
+    for _ in range(n):
+        a = int(input())
+        xy = [list(map(int, input().split())) for _ in range(a)]
+        XY.append(xy)
+    
+    ans = 0
+    for ptn in iter_product([0,1], n):
+        flag = True
+        for i in range(n):
+            for x, y in XY[i]:
+                if ptn[i] == 1:
+                    if ptn[x-1] != y:
+                        flag = False
+                        break
+            
+        if flag:
+            ans = max(ans, sum(ptn))
+    
+    return ans
 
-for i in range(N):
-    Ai = int(input())
-    xy = [list(map(int, input().split())) for l in range(Ai)]
-    XY.append(xy)
+print(main())
 
-ans = 0
-for ptn in iter_product(N):
-    flag = True
-    for idx, itm in enumerate(XY):
-        if ptn[idx] == 1:
-            for comment in itm:
-                if ptn[comment[0]-1] != comment[1]:
-                    flag = False
-                    break
-        else:
-            for comment in itm:
-                if ptn[comment[0]-1] == comment[1]:
-                    flag = False
-                    break
-    if flag:
-        ans = max(ans, sum(ptn))
-
-print(ans)
-
-## not self AC
+# self AC

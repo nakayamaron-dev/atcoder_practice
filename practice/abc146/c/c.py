@@ -14,3 +14,5 @@ while maxVal - minVal > 1:
         minVal = half
     
 print(minVal)
+
+# not self AC

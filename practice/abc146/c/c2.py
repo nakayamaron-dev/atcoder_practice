@@ -2,24 +2,23 @@
 def digit_num(num):
     return len(str(num))
 
-def calc_cost(A, B, N):
-    dn = digit_num(N)
-    return A*N + B*dn
+def main():
+    a, b, x = map(int,input().split())
+    minval = 0
+    maxval = 10**9 + 1
+    
+    while maxval - minval > 1:
+        n = (maxval + minval) // 2
+        cost = a*n + b*digit_num(n)
 
-A, B, X = map(int,input().split())
-low = 0
-high = 10**9 + 1
+        if cost > x:
+            maxval = n
+        else:
+            minval = n
+    
+    return minval
 
-#二分探索
-while high - low > 1:
-    val = (high+low) // 2
+print(main())
 
-    #料金 > 所持金
-    if calc_cost(A, B, val) > X:
-        high = val
-    else:
-        low = val
-
-print(low)
-
-## not self AC
+# not self AC
+# 惜しかった。
