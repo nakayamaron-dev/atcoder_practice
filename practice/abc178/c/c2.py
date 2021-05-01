@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
+def main():
+    n = int(input())
+    mod = 10**9 + 7
+    ans = pow(10, n, mod) - pow(9, n, mod) - pow(9, n, mod) + pow(8, n, mod)
+    return ans % mod
 
-# 方針
-# N個から0,9が入る枠を2つ選ぶ場合の数を求める。順列
-# ↑のやり方で失敗した。
+print(main())
 
-N = int(input())
-mod = 10**9 + 7
-
-print((10**N - 2*9**N + 8**N) % mod)
-
-# 全体から削ぎ落とす考え方を身に着けよう。
+# self AC

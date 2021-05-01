@@ -1,30 +1,29 @@
 #!/usr/bin/env python3
-# 方針
-# 制約条件：1 <= H,W <= 6より、おそらく全探索
-H, W, K = map(int,input().split())
-C = []
-for i in range(H):
-    c = input().replace('.','0').replace('#','1')
-    c = [int(i) for i in c]
-    C.append(c)
+def main():
+    h, w, k = map(int,input().split())
+    c = []
+    ans = 0
 
-ans = 0
-for i in range(2**H):
-    for j in range(2**W):
-        cnt = 0
-        for h in range(H):
-            for w in range(W):
-                # 縦 or 横で選ばれている場合は赤色になる。
-                if ((i>>h)&1) or ((j>>w)&1):
-                    continue
-                # 選ばれてないマスの場合、黒であれば1, 白であれば0を加算
-                else:
-                    cnt += C[h][w]
+    black = 0
+    for i in range(h):
+        row = list(map(str, input().split()))
+        c.append(row[0])
+        black += c[i].count("#")
+    
+    for h_bit in range(2**h):
+        for w_bit in range(2**w):
+            cnt = 0
+            for i in range(h):
+                for j in range(w):
+                    if (h_bit>>i)&1 or (w_bit>>j)&1:
+                        if c[i][j] == "#":
+                            cnt += 1
             
-        #個数チェック
-        if cnt == K:
-            ans += 1
+            if black - cnt == k:
+                ans += 1
+    
+    return ans
 
-print(ans)
+print(main())
 
-## not self AC
+# self AC

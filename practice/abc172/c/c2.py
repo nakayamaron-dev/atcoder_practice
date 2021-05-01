@@ -1,35 +1,27 @@
-# 方針
-# A, Bそれぞれの累積時間で考える。
-# Aを固定し、Bを何冊読むか探索する。
-
 #!/usr/bin/env python3
-N,M,K=map(int,input().split())
-A=list(map(int,input().split()))
-B=list(map(int,input().split()))
+def main():
+    n, m, k = map(int,input().split())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+    A, B = [0], [0]
 
-cumsum = 0
-cumsum_a = [0]
-for a in A:
-    cumsum += a
-    cumsum_a.append(cumsum)  
+    for i in range(n):
+        A.append(A[i]+a[i])
+    for i in range(m):
+        B.append(B[i]+b[i])
 
-cumsum = 0
-cumsum_b = [0]
-for b in B:
-    cumsum += b
-    cumsum_b.append(cumsum)
-
-r = M
-ans = 0
-for i in range(N+1):
-    if cumsum_a[i] > K:
-        break
-    # Aを固定した状態で、Bが何冊読めるか
-    while cumsum_a[i]+cumsum_b[r] > K:
-        r -= 1
+    ans = 0
+    for i in range(n+1):
+        if A[i] > k:
+            break 
+        while A[i] + B[m] > k:
+            m -= 1
+        ans = max(ans, i+m)
     
-    ans = max(ans, i+r)
+    return ans
 
-print(ans)
-
-## not self AC
+print(main())
+        
+# not self AC
+# 累積時間、　Aを固定してBの読める本数を考える
+# もう一度挑戦する。

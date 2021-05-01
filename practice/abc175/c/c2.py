@@ -1,24 +1,18 @@
 #!/usr/bin/env python3
-# 方針
-# まずXから0に向けてできるだけ移動させる。
-# 0をまたぐと残りは行ったり来たりを繰り返す。
+def main():
+    x, k, d = map(int,input().split())
+    x = abs(x)
 
-X, K, D = map(int,input().split())
+    cnt = x // d
 
-# 正に統一する。
-X = abs(X)
-
-cnt = X // D
-mod = X % D
-
-# 0をまたげない場合
-if cnt >= K:
-    print(X - D*K)
-# 0をまたげる場合
-else:
-    if (K - cnt) % 2 == 1:
-        print(abs(X - (cnt+1)*D))
+    if cnt >= k:
+        return x - d*k
     else:
-        print(abs(X - cnt*D))
+        if (k-cnt) % 2 == 0:
+            return abs(x-d*cnt)
+        else:
+            return abs(x-d*(cnt+1))
 
-## not self AC
+print(main())
+
+# self AC
