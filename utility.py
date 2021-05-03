@@ -3,6 +3,10 @@ from collections import deque
 from bisect import bisect_left,bisect_right
 from decimal import Decimal
 
+# 再帰上限を増やす
+import sys
+sys.setrecursionlimit(1000000)
+
 # print()の便利版
 def chkprint(*args):
     from inspect import currentframe
