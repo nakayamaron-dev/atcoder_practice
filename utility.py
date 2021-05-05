@@ -41,6 +41,7 @@ def calc_permutations_count(n, r):
 # 組み合わせ総数計算
 def calc_combinations_count(n, r):
     import math
+    if n < r:return 0
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
 # 順列をリスト化
