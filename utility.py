@@ -1,11 +1,16 @@
 from collections import Counter
 from collections import deque
+import heapq
 from bisect import bisect_left,bisect_right
 from decimal import Decimal
 
 # 再帰上限を増やす
 import sys
 sys.setrecursionlimit(1000000)
+
+# nで表現される集合に要素iが含まれるか判定してTrue/Falseを返す関数
+def has_bit(n, i):
+    return (n & (1<<i) > 0)
 
 # print()の便利版
 def chkprint(*args):
