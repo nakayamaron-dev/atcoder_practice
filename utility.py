@@ -44,6 +44,16 @@ def calc_combinations_count(n, r):
     if n < r:return 0
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
+#非常に大きい数のnCrを計算する必要がある場合
+def cmb(n, r, mod):
+    x, y = 1, 1
+    for i in range(r):
+        x = x*(n-i) % mod
+        y = y*(i+1) % mod
+    
+    # yで割ることと、pow(y, mod-2, mod)を掛けることは同義 (フェルマーの小定理)
+    return x * pow(y, mod-2, mod) % mod
+
 # 順列をリスト化
 def permutations_array(arr, r):
     import itertools
