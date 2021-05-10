@@ -31,7 +31,11 @@
       "id": "abc147_d",
       "label": "D",
       "title": "Xor Sum 4",
-      "url": "https://atcoder.jp/contests/abc147/tasks/abc147_d"
+      "url": "https://atcoder.jp/contests/abc147/tasks/abc147_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc147_e",

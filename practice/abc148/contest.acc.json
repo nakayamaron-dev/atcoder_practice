@@ -31,7 +31,11 @@
       "id": "abc148_d",
       "label": "D",
       "title": "Brick Break",
-      "url": "https://atcoder.jp/contests/abc148/tasks/abc148_d"
+      "url": "https://atcoder.jp/contests/abc148/tasks/abc148_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc148_e",
