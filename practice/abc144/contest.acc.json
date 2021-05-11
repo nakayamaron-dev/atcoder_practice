@@ -31,7 +31,11 @@
       "id": "abc144_d",
       "label": "D",
       "title": "Water Bottle",
-      "url": "https://atcoder.jp/contests/abc144/tasks/abc144_d"
+      "url": "https://atcoder.jp/contests/abc144/tasks/abc144_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc144_e",

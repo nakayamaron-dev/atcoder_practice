@@ -31,7 +31,11 @@
       "id": "abc145_d",
       "label": "D",
       "title": "Knight",
-      "url": "https://atcoder.jp/contests/abc145/tasks/abc145_d"
+      "url": "https://atcoder.jp/contests/abc145/tasks/abc145_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc145_e",

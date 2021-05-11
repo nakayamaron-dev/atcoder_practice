@@ -1,49 +1,39 @@
-#!/usr/bin/env python3
-import sys
 from collections import deque
-sys.setrecursionlimit(pow(10, 6))
+ 
+n = int(input())
 
-def main():
-    N = int(input())
-    edges = [[] for _ in range(N)]
+g = [[] for _ in range(n)]
+for i in range(n-1):
+    a, b = map(int, input().split())
+    a, b = a - 1, b - 1
+    g[a].append((b, i))
+    g[b].append((a, i))
+ 
+edge = [0] * (n - 1)
+parent = [-1] * n
+ 
+q = deque()
+q.append(0)
+num_color = 0
 
-    for i in range(N-1):
-        a, b = map(int,input().split())
-        edges[a-1].append((b-1, i))
-        edges[b-1].append((a-1, i))
-    
-    c_num = max(len(edges[i]) for i in range(N))
-    ans = [-1] * (N-1)
+# dfs
+while len(q):
+    now = q.popleft()
+    color = 1
+    ng_color = parent[now]
+    for v, e in g[now]:
+        #未訪問かどうか
+        if edge[e] == 0:
+            if color == ng_color:
+                color+=1
+            num_color = max(num_color, color)
+            edge[e] = color
+            parent[v] = color
+            color+=1
+            q.append(v)
 
-    def rec(i, p):
-        col = []
-
-        for e, ei in edges[i]:
-            if ans[ei] != -1:
-                col.append(ans[ei])
-        
-        col.sort()
-        col = deque(col)
-
-        ci = 1
-
-        for e, ei in edges[i]:
-            if ans[ei] == -1:
-                while len(col) > 0 and ci == col[0]:
-                    ci += 1
-                    col.popleft()
-                
-                ans[ei] = ci
-                ci += 1
-            
-            if e != p:
-                rec(e, i)
-    rec(0, -1)
-
-    print(c_num)
-    print(*ans, sep='\n')
-
-main()
+print(num_color)
+print(*edge, sep='\n')
 
 # not self AC
-# まだ途中
+# dfsの復習が必要。
