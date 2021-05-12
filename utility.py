@@ -86,6 +86,14 @@ def get_divisors(n):
         i += 1
     return lower_divisors + upper_divisors[::-1]
 
+#公約数を求める
+def cf(x1,x2):
+    cf=[]
+    for i in range(2,min(x1,x2)+1):
+        if x1 % i == 0 and x2 % i == 0:
+            cf.append(i)
+    return cf
+
 # 数字を桁ごとにリスト化
 def splitdigit(num):
     return list(map(int, str(num)))

@@ -31,7 +31,11 @@
       "id": "abc142_d",
       "label": "D",
       "title": "Disjoint Set of Common Divisors",
-      "url": "https://atcoder.jp/contests/abc142/tasks/abc142_d"
+      "url": "https://atcoder.jp/contests/abc142/tasks/abc142_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc142_e",
