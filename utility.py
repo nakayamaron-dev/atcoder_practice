@@ -3,6 +3,7 @@ from collections import deque
 import heapq
 from bisect import bisect_left,bisect_right
 from decimal import Decimal
+from heapq import heappop, heapify, heappush
 
 # 再帰上限を増やす
 import sys
@@ -107,13 +108,13 @@ def calc_mod(n, mod):
     return n % mod
 
 # 最大公約数
-def get_gcd(*numbers):
+def gcd(*numbers):
     import math
     from functools import reduce
     return reduce(math.gcd, numbers)
 
 # 最小公倍数
-def get_lm(a: int, b: int):
+def lm(a: int, b: int):
     import math
     return (a * b) // math.gcd(a, b)
 

@@ -1,28 +1,33 @@
 #!/usr/bin/env python3
-def get_gcd(*numbers):
+def gcd(*numbers):
     import math
     from functools import reduce
     return reduce(math.gcd, numbers)
 
+def prime_factorize(n: int) -> list:
+    return_list = []
+    while n % 2 == 0:
+        return_list.append(2)
+        n //= 2
+    f = 3
+    while f * f <= n:
+        if n % f == 0:
+            return_list.append(f)
+            n //= f
+        else:
+            f += 2
+    if n != 1:
+        return_list.append(n)
+    return return_list
+
 def main():
     A, B = map(int,input().split())
-    x = get_gcd(A, B)
-    ans = 1
+    x = gcd(A, B)
 
-    for i in range(2, x):
-        if i * i > x: break
-        if x % i: continue
-
-        ans += 1
-        while x % i == 0:
-            x //= i
-    
-    if x > 1:
-        ans += 1
-    
-    return ans
+    divs = set(prime_factorize(x))
+    return len(divs) + 1
 
 print(main())
 
 # not self AC
-# 途中
+# 最大公約数の素因数の個数+1が答えになる。
