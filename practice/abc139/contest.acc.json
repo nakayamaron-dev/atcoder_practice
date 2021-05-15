@@ -31,7 +31,11 @@
       "id": "abc139_d",
       "label": "D",
       "title": "ModSum",
-      "url": "https://atcoder.jp/contests/abc139/tasks/abc139_d"
+      "url": "https://atcoder.jp/contests/abc139/tasks/abc139_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc139_e",

@@ -31,7 +31,11 @@
       "id": "abc138_d",
       "label": "D",
       "title": "Ki",
-      "url": "https://atcoder.jp/contests/abc138/tasks/abc138_d"
+      "url": "https://atcoder.jp/contests/abc138/tasks/abc138_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "abc138_e",
