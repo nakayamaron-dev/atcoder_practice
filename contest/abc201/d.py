@@ -1,35 +1,23 @@
 H, W = map(int,input().split())
 A = [input() for _ in range(H)]
 
-taka = 0
-aoki = 0
+dp = [[0]*W for _ in range(H)]
 
-for i in range(H):
-    cnt = A[i].count("+")
-    taka_row = 0
-    aoki_row = 0
-    if i % 2 == 0:
-        for j in range(1, W, 2):
-            if A[i][j] == "+":
-                taka_row += 1
+for i in reversed(range(H)):
+    for j in reversed(range(W)):
+        if i == H-1 and j == W-1:
+            continue
+        
+        dp[i][j] = - float("inf")
 
-        if i == 0 and A[i][0] == "+":
-            aoki_row += cnt - taka -1
-        else:
-            aoki_row += cnt - taka
-    else:
-        for j in range(0, W, 2):
-            if A[i][j] == "+":
-                taka_row += 1
-        aoki_row += cnt - taka
-    
-    taka += taka_row
-    aoki += aoki_row
-    
-if taka > aoki:
-    print("Takahashi")
-elif aoki > taka:
-    print("Aoki")
-else:
-    print("Draw")
+        if i+1 < H:
+            score = 1 if A[i+1][j] == "+" else -1
+            dp[i][j] = max(dp[i][j], -dp[i+1][j] + score)
 
+        if j+1 < W:
+            score = 1 if A[i][j+1] == '+' else -1
+            dp[i][j] = max(dp[i][j], -dp[i][j+1] + score)
+
+if dp[0][0] == 0: print("Draw")
+if dp[0][0] > 0: print("Takahashi")
+if dp[0][0] < 0: print("Aoki") 
