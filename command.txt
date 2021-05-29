@@ -8,3 +8,6 @@ bash ../../../script/run.sh
 ◎ おまじない
 #!/usr/bin/env python3
 
+◎ venv activate
+source venv/bin/activate
+

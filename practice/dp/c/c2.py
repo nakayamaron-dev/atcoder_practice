@@ -3,6 +3,7 @@ def main():
     N = int(input())
     ABC = [list(map(int, input().split())) for _ in range(N)]
 
+    # dp[i][j]: i日目にjの問題を選んだ場合の幸福度の最大
     dp = [[0]*3 for _ in range(N+1)]
 
     for i in range(1, N+1):
