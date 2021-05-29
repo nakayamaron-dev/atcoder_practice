@@ -5,7 +5,7 @@ def main():
     N = int(input())
     S = ["".join(sorted(input())) for _ in range(N)]
     cnt = Counter(S)
-    
+
     ans = 0
     for val in cnt.values():
         ans += val * (val-1) // 2
@@ -13,3 +13,5 @@ def main():
     return ans
 
 print(main())
+
+# self AC
