@@ -37,3 +37,5 @@ def dfs(i, bit, a, b):
 ans = dfs(0, 0, A, B)
 
 print(ans)
+
+# not self AC
