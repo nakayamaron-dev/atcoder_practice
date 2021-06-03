@@ -12,4 +12,5 @@ for i in range(n):
 
 print(ans)
 
- ## 式変形をして2重ループを回避する。
+# not self AC
+# 式変形をして2重ループを回避する。
