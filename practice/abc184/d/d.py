@@ -8,7 +8,7 @@ def f(a, b, c):
         return 0
 
     s = a+b+c
-    return f(a+1,b,c)*a/s+f(a,b+1,c)*b/s+f(a,b,c+1)*c/s+1
+    return f(a+1,b,c)*a/s + f(a,b+1,c)*b/s + f(a,b,c+1)*c/s + 1
             
 print(f(a,b,c))
 
