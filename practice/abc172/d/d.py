@@ -10,6 +10,6 @@ for k in range(1, N+1):
 
 print(int(ans))
 
- ## not self AC
+ # not self AC
  # 愚直にやるとTLEになる。
  # 各倍数の和を足していく方式
