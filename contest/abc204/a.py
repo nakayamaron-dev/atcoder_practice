@@ -6,5 +6,4 @@ def main():
     else:
         return 3 - X - Y
 
-
 print(main())
