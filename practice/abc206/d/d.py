@@ -61,9 +61,6 @@ def main():
     for i in range(N // 2):
         uf.union(A[i], A[-i-1])
     
-    print(uf.parents)
-    print(uf.all_group_members())
-    
     for i in range(len(uf.parents)):
         if uf.parents[i] > -1:
             ans += 1
