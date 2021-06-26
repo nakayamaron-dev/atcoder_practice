@@ -4,6 +4,7 @@ import heapq
 from bisect import bisect_left,bisect_right
 from decimal import Decimal
 from heapq import heappop, heapify, heappush
+import itertools
 
 # 再帰上限を増やす
 import sys
