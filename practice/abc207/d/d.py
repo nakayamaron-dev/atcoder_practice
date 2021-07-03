@@ -8,15 +8,10 @@ def main():
     S = [complex(*map(int, input().split())) for _ in range(N)]
     T = [complex(*map(int, input().split())) for _ in range(N)]
 
-    print(S)
-
     g = sum(S) / N
     S = [x-g for x in S]
     g = sum(T) / N
     T = [x-g for x in T]
-
-    print(sum(S))
-    print(S)
 
     z = max(S, key=abs) #重心にはない点を一つ選択
 
