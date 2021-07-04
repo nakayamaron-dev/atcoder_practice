@@ -8,7 +8,7 @@ import itertools
 
 # 再帰上限を増やす
 import sys
-sys.setrecursionlimit(1000000)
+sys.setrecursionlimit(10**6)
 
 # nで表現される集合に要素iが含まれるか判定してTrue/Falseを返す関数
 def has_bit(n, i):
