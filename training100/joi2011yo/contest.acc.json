@@ -27,7 +27,11 @@
       "id": "joi2011yo_d",
       "label": "D",
       "title": "1年生 (A First Grader)",
-      "url": "https://atcoder.jp/contests/joi2011yo/tasks/joi2011yo_d"
+      "url": "https://atcoder.jp/contests/joi2011yo/tasks/joi2011yo_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
     },
     {
       "id": "joi2011yo_e",
