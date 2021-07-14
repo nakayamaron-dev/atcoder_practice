@@ -42,7 +42,6 @@ def main():
             g[a-1].append((b-1, c))
             g[b-1].append((a-1, c))
     
-    # print(*ans, sep="\n")
     return ans
 
 print(*main(), sep="\n")

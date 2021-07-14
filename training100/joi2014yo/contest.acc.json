@@ -37,7 +37,11 @@
       "id": "joi2014yo_e",
       "label": "E",
       "title": "タクシー (Taxis)",
-      "url": "https://atcoder.jp/contests/joi2014yo/tasks/joi2014yo_e"
+      "url": "https://atcoder.jp/contests/joi2014yo/tasks/joi2014yo_e",
+      "directory": {
+        "path": "e",
+        "testdir": "tests"
+      }
     },
     {
       "id": "joi2014yo_f",
