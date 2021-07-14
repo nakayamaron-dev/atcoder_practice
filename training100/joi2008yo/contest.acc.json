@@ -47,7 +47,11 @@
       "id": "joi2008yo_f",
       "label": "F",
       "title": "船旅",
-      "url": "https://atcoder.jp/contests/joi2008yo/tasks/joi2008yo_f"
+      "url": "https://atcoder.jp/contests/joi2008yo/tasks/joi2008yo_f",
+      "directory": {
+        "path": "f",
+        "testdir": "tests"
+      }
     }
   ]
 }
