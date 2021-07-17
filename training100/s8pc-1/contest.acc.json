@@ -33,7 +33,11 @@
       "id": "s8pc_1_e",
       "label": "E",
       "title": "散歩 (E869120 and Path Length)",
-      "url": "https://atcoder.jp/contests/s8pc-1/tasks/s8pc_1_e"
+      "url": "https://atcoder.jp/contests/s8pc-1/tasks/s8pc_1_e",
+      "directory": {
+        "path": "e",
+        "testdir": "tests"
+      }
     },
     {
       "id": "s8pc_1_f",
