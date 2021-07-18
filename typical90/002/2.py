@@ -7,18 +7,18 @@ def main():
     if N % 2 == 0:
         for ptn in product((1, 0), repeat=N):
             cnt = [0, 0]
-            flag_total = False
-            flag = True
+            flag1 = False
+            flag2 = True
 
-            flag_total = (sum(ptn) ==  N//2)
+            flag1 = (sum(ptn) ==  N//2)
 
             for j in ptn:
                 cnt[j] += 1
                 if cnt[0] < cnt[1]:
-                    flag = False
+                    flag2 = False
                     break
             
-            if flag_total and flag:
+            if flag1 and flag2:
                 ans.append("".join(map(str, ptn)).replace("0", "(").replace("1", ")"))
             
         print("\n".join(sorted(ans)))
