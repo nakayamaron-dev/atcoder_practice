@@ -1,6 +1,4 @@
-from collections import Counter
-from collections import deque
-from collections import defaultdict
+from collections import Counter, deque, defaultdict
 import heapq
 from bisect import bisect_left,bisect_right
 from decimal import Decimal
