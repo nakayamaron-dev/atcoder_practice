@@ -173,3 +173,16 @@ def factorization(n):
         arr.append([n, 1])
 
     return arr
+
+# 10進数をn進数に変換する。 (str)
+def base10int(value, base):
+    if (int(value / base)):
+        return base10int(int(value / base), base) + str(value % base)
+    return str(value % base)
+
+def shinsu(num, base):
+    nine = ""
+    while num > 0:
+        nine += str(num % base)
+        num //= base
+    return int(nine[::-1])
