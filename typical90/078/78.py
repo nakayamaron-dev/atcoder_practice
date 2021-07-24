@@ -6,14 +6,11 @@ def main():
 
     for _ in range(M):
         A, B = map(int,input().split())
-        A, B = A-1, B-1
-        Min = min(A, B)
-        Max = max(A, B)
-        g[Max].append(Min)
+        g[max(A, B)-1].append(min(A, B)-1)
     
     for itm in g:
         if len(itm) == 1:
-            ans += len(itm)
+            ans += 1
     
     return ans
 
