@@ -18,7 +18,8 @@ def main():
 
     for a in yakusu:
         for b in yakusu:
-            if K % (a*b) == 0 and a <= b and K // a // b >= b:
+            c = K / (a*b)
+            if c.is_integer() and a <= b <= c:
                 ans += 1
     
     return ans
