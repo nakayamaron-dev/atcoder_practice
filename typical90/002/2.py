@@ -14,6 +14,7 @@ def main():
 
             for j in ptn:
                 cnt[j] += 1
+                # どんなときも"("が")"より少なくなることはない。
                 if cnt[0] < cnt[1]:
                     flag2 = False
                     break

@@ -38,19 +38,13 @@ def main():
             if S[nh][nw] == "#":
                 continue
 
-            if i == j:
-                cost = stay
-            else:
-                cost = step
+            cost = stay if i == j else step
 
             if dist[nh][nw][j] <= cost:
                 continue
 
             dist[nh][nw][j] = cost
 
-            if i == j:
-                q.appendleft([nh, nw, j])
-            else:
-                q.append([nh, nw, j])
+            q.appendleft([nh, nw, j]) if i == j else q.append([nh, nw, j])
 
 print(main())

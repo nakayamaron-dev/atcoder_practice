@@ -35,6 +35,7 @@ def main():
     # 決めたstartから始めた場合の最大距離を求める。
     d = bfs(start)
 
+    # 一番遠いところから戻ってくるstartに戻ってくる道路を新設することが最適
     return max(d) + 1
 
 print(main())

@@ -11,7 +11,7 @@ def main():
     if dim > K:
         return "No"
     else:
-        if (dim - K) % 2 == 0:
+        if (K - dim) % 2 == 0:
             return "Yes"
         else:
             return "No"
