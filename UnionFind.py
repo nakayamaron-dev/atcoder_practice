@@ -85,8 +85,7 @@ class UnionFind():
         x = self.find(x)
         y = self.find(y)
  
-        if x == y:
-            return
+        if x == y: return
  
         if self.parents[x] > self.parents[y]:
             x, y = y, x
