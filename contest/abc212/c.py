@@ -1,4 +1,4 @@
-from bisect import bisect_left,bisect_right
+from bisect import bisect_left
 def main():
     N, M = map(int,input().split())
     A = list(map(int, input().split()))
