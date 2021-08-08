@@ -197,3 +197,10 @@ def prefix_sum(A):
 #座標圧縮
 def compress(arr):
   return {e: i for i, e in enumerate(sorted(set(arr)))}
+
+# DFSサンプル
+def dfs(pre, cur):
+    for i in g[cur]:
+        if i != pre:
+            ans[i] += ans[cur]
+            dfs(cur, i)
