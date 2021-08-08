@@ -1,5 +1,4 @@
 from collections import Counter, deque, defaultdict
-import heapq
 from bisect import bisect_left,bisect_right
 from decimal import Decimal
 from heapq import heappop, heapify, heappush
@@ -186,3 +185,15 @@ def shinsu(num, base):
         nine += str(num % base)
         num //= base
     return int(nine[::-1])
+
+# 累積和配列
+def prefix_sum(A):
+    n = len(A)
+    P = [0] * (n + 1)
+    for k in range(1, n + 1):
+        P[k] = P[k - 1] + A[k - 1]
+    return P
+
+#座標圧縮
+def compress(arr):
+  return {e: i for i, e in enumerate(sorted(set(arr)))}
