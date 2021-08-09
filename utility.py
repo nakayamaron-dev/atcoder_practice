@@ -204,3 +204,10 @@ def dfs(pre, cur):
         if i != pre:
             ans[i] += ans[cur]
             dfs(cur, i)
+
+# 連番のxor計算
+def XorSerial(n):
+    if n % 2 == 0:
+        return ((n//2) % 2) ^ n
+    else:
+        return (n//2) % 2
