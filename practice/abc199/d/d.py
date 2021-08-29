@@ -13,12 +13,14 @@ for _ in range(M):
 
 visited = [-1] * N
 
+
 def visit(x):
     visited[x] = 1
     s.append(x)
     for nx in g[x]:
         if visited[nx] == -1:
             visit(nx)
+
 
 def paint(x):
     for nx in g[s[x]]:
@@ -35,6 +37,7 @@ def paint(x):
         c[s[x+1]] = -1
 
     return res
+
 
 ans = 1
 for i in range(N):
