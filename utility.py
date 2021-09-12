@@ -289,3 +289,14 @@ def XorSerial(n):
         return ((n//2) % 2) ^ n
     else:
         return (n//2) % 2
+
+
+# 座標回転
+def rotation(point, degree):
+    import math
+    cos = math.cos(math.radians(degree))
+    sin = math.sin(math.radians(degree))
+    x = round(point[0] * cos - point[1] * sin, 2)
+    y = round(point[0] * sin + point[1] * cos, 2)
+
+    return (x, y)
