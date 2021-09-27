@@ -25,12 +25,15 @@ def main():
         p = prime_factorize(a)
 
         for j in p:
+            # M以上の素因数 or 既出の素因数の場合スキップする。
             if j > M or ans[j] != 0:
                 continue
 
+            # M以下の素因数の倍数を答えから除外する。
             for k in range(j, M+1)[::j]:
                 ans[k] = 1
 
+    # ansの要素が0の数が答えの数となる。
     print(M - sum(ans))
 
     for i in range(1, M+1):
