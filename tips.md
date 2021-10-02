@@ -21,3 +21,4 @@
   - x^(p-1) ≡ 1 (mod p) → x^(p-2) ≡ 1/x (mod p)
 - 重複あり組み合わせ：nHk = n-1+k C n-1 (abc021 - d)
 - list より array の方が効率が良い。(abc217 import array)
+- 中央値というワードが出たら、まずは二分探索を疑え。(abc203)
