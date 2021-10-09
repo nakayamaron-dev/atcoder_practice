@@ -16,7 +16,6 @@ def main():
     for x, y in event:
         # 各種サービスの合計利用料とプライム加入料C円の小さい方の金額を次のイベントまで支払う。
         ans += min(fee, C) * (x - day)
-        print(ans)
 
         # 日にちを更新
         day = x

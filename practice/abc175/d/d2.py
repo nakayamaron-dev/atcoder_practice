@@ -1,43 +1,39 @@
-# 方針
-# 
-N, K = map(int,input().split())
-P = list(map(lambda x: int(x) - 1, input().split()))
-C = list(map(int,input().split()))
+N, K = map(int, input().split())
+P = list(map(int, input().split()))
+C = list(map(int, input().split()))
 
-ans = -float("inf")
+ans = -float('inf')
+for s in range(N):
+    # Step1
+    S = []  # 累積和S. ただし, 初項は0ではなく1回目の移動後の得点とする.
+    # 1回目の移動
+    i = P[s] - 1
+    S.append(C[i])
+    # 2回目以降の移動. スタート地点に戻ってくるまで繰り返し.
+    while i != s:
+        i = P[i] - 1
+        S.append(S[-1] + C[i])
 
-# 開始地点は全探索
-for i in range(N):
-    curr = 0
-    score = [0]
-    start = i
+    # Step2: KとSの長に応じて場合分けして, 得点の最大値を求める.
+    # 1周未満しか移動できない場合:
+    if K <= len(S):
+        score = max(S[:K])
+    # 1周以上回ることができるが, ループを1周したときに得点が減る場合:
+    elif S[-1] <= 0:
+        score = max(S)
+    # 1週以上回ることができ, かつループを1週するごとに得点が増える場合:
+    else:
+        # ループを (K // len(S) - 1)回 廻る場合:
+        score1 = S[-1] * (K // len(S) - 1)
+        score1 += max(S)
+        # ループを (K // len(S))回 廻る場合:
+        score2 = S[-1] * (K // len(S))
+        r = K % len(S)
+        if r != 0:
+            score2 += max(0, max(S[:r]))
+        # score1 と score2 の大きい方がこの場合の得点の最大値
+        score = max(score1, score2)
 
-    #開始地点に戻ってくるまで(移動サイクルを探す)
-    while P[start] != i:
-        start = P[start]
-        curr += C[start]
-        score.append(curr)
-    
-    cycle_score = score[-1] + C[i] #最後に移動分の得点を足す必要がある。
-    cycle_len = len(score)
-
-    #サイクル中どこで終わればいいか
-    for j in range(cycle_len):
-
-
-        if j <= K and j != 0:
-            #何サイクル目か
-            cycles = (K - j) // cycle_len
-
-            #1サイクルの得点が0以下の場合は0、0より大きい場合はサイクル得点が加点される。
-            point = score[j] + max(0, cycle_score)*cycles
-            ans = max(ans, point)
-
-        elif j == 0 and K >= cycle_len:
-            point = cycle_score * K // cycle_len
-            ans = max(ans, point)
+    ans = max(ans, score)
 
 print(ans)
-
-## not self AC     
-# 難しい   

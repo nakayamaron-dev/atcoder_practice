@@ -2,26 +2,26 @@
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-    
+
     if N > 8:
         A = A[:8]
-    
+
     L = [[] for _ in range(200)]
     M = len(A)
 
     for bit in range(1, 2**M):
-        s = 0 #和
-        I = [] #選び方
+        s = 0  # 和
+        I = []  # 選び方
 
         for i in range(M):
             if (bit >> i) & 1:
                 s += A[i]
-                I.append(i+1) #出力はi+1
-        
-        mod = s % 200 #余り
+                I.append(i+1)  # 出力はi+1
+
+        mod = s % 200  # 余り
         L[mod].append(I)
 
-    #総和の余りがiの数列が2つ以上あるか探す。
+    # 総和の余りがiの数列が2つ以上あるか探す。
     for i in range(200):
         if len(L[i]) >= 2:
             B = L[i][0]
@@ -32,9 +32,10 @@ def main():
             print(*B_out)
             print(*C_out)
             return
-    
+
     print("No")
     return
+
 
 main()
 

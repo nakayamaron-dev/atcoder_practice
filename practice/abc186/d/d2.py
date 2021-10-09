@@ -9,8 +9,9 @@ def main():
     for i in range(N):
         asum -= A[i]
         ans += asum - A[i] * (N-(i+1))
-    
+
     return ans
+
 
 print(main())
 

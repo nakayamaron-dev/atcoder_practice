@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-N, K = map(int,input().split())
+N, K = map(int, input().split())
 LR = [list(map(int, input().split())) for l in range(K)]
 
 mod = 998244353
@@ -10,9 +10,12 @@ sdp[1] = 1
 
 for i in range(N):
     for lr in LR:
-        dp[i] += sdp[max(i-lr[0]+1, 0)] - sdp[max(i-lr[1], 0)]
-    dp[i] %= mod
-    sdp[i+1] = sdp[i]+dp[i]
+        left = max(0, i - lr[1])
+        right = max(0, i - lr[0] + 1)
+        dp[i] += sdp[right] - sdp[left]
+        dp[i] %= mod
+
+    sdp[i+1] = (sdp[i]+dp[i]) % mod
 
 print(dp[N-1])
 

@@ -2,40 +2,44 @@
 import sys
 sys.setrecursionlimit(10 ** 6)
 
-H, W, A, B = map(int, input().split())
-N = H * W
+h, w, a, b = map(int, input().split())
 
-def dfs(i, bit, a, b):
-    '''
-    i: 現在位置
-    bit: 畳の敷設状態を示すビット列
-    a, b: 畳の残り枚数
-    '''
-    ret = 0  # ret: 現在マス以降の敷き方の総数
-    h, w = divmod(i, W)  # h, w: 現在マスはh列w行
-    if i == H * W:  # 全マスに敷き終わった場合
-        ret = 1
-    elif (bit >> i) & 1:  # 現在マスが既に敷設済の場合
-        ret += dfs(i + 1, bit, a, b)  # 何もせず次のマスに移動
-    else:  # 現在マスの畳の敷き方
-        # Bを敷く場合
-        if b > 0:
-            nbit = bit | (1 << i)
-            ret += dfs(i + 1, nbit, a, b - 1)
-        # Aを横向きに敷く
-        if a > 0 and w < W - 1 and not (bit >> (i + 1)) & 1:
-            # 横のマス(i + 1)が空いているときのみ可能
-            nbit = bit | (1 << i) | (1 << (i + 1))
-            ret += dfs(i + 1, nbit, a - 1, b)
-        # Aを縦向きに敷く
-        if a > 0 and h < H - 1 and not (bit >> (i + W)) & 1:
-            # 下のマス(i + W)が空いているときのみ可能
-            nbit = bit | (1 << i) | (1 << (i + W))
-            ret += dfs(i + 1, nbit, a - 1, b)
-    return ret
+used = [[0]*w for _ in range(h)]  # 畳があるか管理
 
-ans = dfs(0, 0, A, B)
+res = 0
 
-print(ans)
+# マス(1,1)から(1,w)、(2,1)から(2,w)・・・(h,1)から(h,w)の順にdfs
+
+
+def dfs(i, j, a, b):
+    global res
+    if a < 0 or b < 0:  # 畳がa枚以下やb枚以下になれば失敗
+        return
+    if j == w:      # 右端に来たら次の行へ
+        j = 0
+        i += 1
+    if i == h:      # iがhになれば成功(条件にあう畳の敷き詰め方)
+        res += 1
+        return
+    if used[i][j] == 1:  # 調べるマスに畳があれば次のマスに
+        return dfs(i, j+1, a, b)
+
+    used[i][j] = 1
+    dfs(i, j+1, a, b-1)    # 半畳 使う場合
+    if j+1 < w and used[i][j+1] == 0:  # 横に1畳置く場合
+        used[i][j+1] = 1
+        dfs(i, j+1, a-1, b)
+        used[i][j+1] = 0
+
+    if i+1 < h and used[i+1][j] == 0:  # 縦に1畳置く場合
+        used[i+1][j] = 1
+        dfs(i, j+1, a-1, b)
+        used[i+1][j] = 0
+
+    used[i][j] = 0  # 元に戻す
+    return res
+
+
+print(dfs(0, 0, a, b))
 
 # not self AC

@@ -1,22 +1,24 @@
 #!/usr/bin/env python3
+from itertools import accumulate
+
+
 def main():
-    N, W = map(int,input().split())
+    N, W = map(int, input().split())
 
-    plan = []
-    for i in range(N):
-        s, t, p = map(int,input().split())
-        plan.append([s, p])
-        plan.append([t, -p])
-    
-    plan.sort()
-    water = 0
-    for s, p in plan:
-        water += p
+    imos = [0] * 200001
+    for _ in range(N):
+        s, t, p = map(int, input().split())
+        imos[s] += p
+        imos[t] -= p
 
-        if water > W:
-            return "No"
+    acc = list(accumulate(imos))
+    m = max(acc)
 
-    return "Yes" 
+    if m > W:
+        return "No"
+    else:
+        return "Yes"
+
 
 print(main())
 
