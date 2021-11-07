@@ -2,14 +2,16 @@
 def g(n: int):
     return n*(n+1) / 2
 
+
 def main():
     N = int(input())
     ans = 0
 
     for i in range(1, N+1):
         ans += i * g(N//i)
-    
+
     return int(ans)
+
 
 print(main())
 
